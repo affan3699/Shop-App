@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shopapp/Screens/Favourite.dart';
 
 import 'Login.dart';
 
@@ -32,7 +33,11 @@ class NavigationDrawer extends StatelessWidget {
             text: 'Policies',
           ),
           _createDrawerItem(
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Favourite()));
+            },
             icon: Icons.favorite,
             text: 'Favourite Products',
           )
